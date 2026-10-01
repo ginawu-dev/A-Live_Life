@@ -3,7 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A-Live Life</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="A-Live Life helps people save meaningful moments, revisit memories, write to their future self, track milestones, and reflect on life over time." />
+  <link rel="canonical" href="https://ginawu-dev.github.io/A-Live_Life/" />
+
+  <title>A-Live Life — Personal Life Calendar &amp; Memory Journal</title>
+
+  <meta property="og:title" content="A-Live Life — Personal Life Calendar &amp; Memory Journal" />
+  <meta property="og:description" content="A-Live Life helps people save meaningful moments, revisit memories, write to their future self, track milestones, and reflect on life over time." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ginawu-dev.github.io/A-Live_Life/" />
+  <meta property="og:site_name" content="A-Live Life" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A-Live Life — Personal Life Calendar &amp; Memory Journal" />
+  <meta name="twitter:description" content="A-Live Life helps people save meaningful moments, revisit memories, write to their future self, track milestones, and reflect on life over time." />
+  <meta name="twitter:url" content="https://ginawu-dev.github.io/A-Live_Life/" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["SoftwareApplication", "WebSite"],
+      "name": "A-Live Life",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": ["iOS", "iPadOS"],
+      "description": "A-Live Life is a personal life calendar and memory journal for iPhone and iPad. Save meaningful moments, revisit memories, write to your future self, track milestones, and reflect on how your life changes over time.",
+      "url": "https://ginawu-dev.github.io/A-Live_Life/",
+      "downloadUrl": "https://apps.apple.com/us/app/a-live-life/id6813000871",
+      "inLanguage": "en",
+      "isFamilyFriendly": true,
+      "sameAs": [
+        "https://apps.apple.com/us/app/a-live-life/id6813000871"
+      ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a life calendar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A life calendar is a way to capture the meaningful moments, milestones, and memories that shape a person's life over time, rather than only a daily record of tasks or events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is A-Live Life?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A-Live Life is a personal life calendar and memory journal for iPhone and iPad. It helps you save meaningful moments, revisit memories, write to your future self, and reflect on how your life changes over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is A-Live Life different from a traditional diary or journal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A-Live Life is designed around meaningful moments, memories, milestones, and reflection over time rather than requiring a daily diary. You can save what matters most and revisit it later through your life calendar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to write something every day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A-Live Life is designed to help you capture meaningful moments as they happen, without requiring a daily diary entry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I save memories and photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can save meaningful moments with details such as photos, moods, places, dates, and notes, and connect people to the memories you want to keep."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I write a letter to my future self?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A-Live Life includes a Future Me feature for writing letters to your future self so you can leave encouragement, reflection, or perspective for later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track future milestones or countdowns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can track upcoming milestones and countdowns so your life calendar helps you stay connected to what is coming next."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can A-Live Life help with personal reflection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Features such as My Compass, Monthly Reflections, Story of My Year, and Through the Years are designed to help you reflect on patterns, memories, and life change over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does A-Live Life collect personal data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to the App Store listing, A-Live Life is marked as Data Not Collected. The app stores the information you choose to save on your device and may sync through your private iCloud account when iCloud Sync is enabled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is A-Live Life available for iPhone and iPad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A-Live Life is designed for iPhone and iPad."
+          }
+        }
+      ]
+    }
+  </script>
 
   <style>
     :root {
@@ -12,10 +134,16 @@
       --text: #40352f;
       --secondary: #80736a;
       --terracotta: #c9826b;
+      --line: rgba(64, 53, 47, 0.12);
+      --panel: rgba(255, 249, 240, 0.8);
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -24,13 +152,16 @@
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
         Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     main {
       max-width: 760px;
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 72px 24px 88px;
+    }
+
+    .hero {
       text-align: center;
     }
 
@@ -38,105 +169,393 @@
       color: var(--terracotta);
       font-size: 42px;
       margin-bottom: 12px;
+      line-height: 1;
     }
 
     h1,
-    h2 {
+    h2,
+    h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
+      color: var(--text);
     }
 
     h1 {
       font-size: clamp(44px, 9vw, 76px);
       line-height: 1.05;
-      margin: 0 0 20px;
+      margin: 0;
+    }
+
+    .eyebrow {
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      letter-spacing: 0.02em;
+      color: var(--secondary);
+      margin: 22px auto 0;
+      max-width: 520px;
     }
 
     h2 {
-      font-size: 30px;
-      margin-top: 56px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+    }
+
+    p,
+    li {
+      color: var(--secondary);
+      font-size: 1.06rem;
     }
 
     p {
-      color: var(--secondary);
-      font-size: 18px;
+      margin: 0 0 1em;
     }
 
     .intro {
-      max-width: 590px;
-      margin: 0 auto;
+      max-width: 620px;
+      margin: 26px auto 0;
+      text-align: center;
+    }
+
+    .intro p {
+      font-size: clamp(1.06rem, 2.4vw, 1.32rem);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .cta,
+    .secondary-link {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 999px;
+      padding: 0.8rem 1.2rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .cta {
+      background: var(--terracotta);
+      color: #fffdf9;
+      box-shadow: 0 8px 20px rgba(201, 130, 107, 0.2);
+    }
+
+    .secondary-link {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .cta:hover,
+    .secondary-link:hover {
+      opacity: 0.92;
+      text-decoration: none;
+    }
+
+    .content {
+      margin-top: 34px;
     }
 
     .card {
-      margin-top: 36px;
-      padding: 28px;
-      text-align: left;
       background: var(--surface);
       border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(64, 53, 47, 0.08);
+      padding: 28px 24px;
+      box-shadow: 0 10px 30px rgba(64, 53, 47, 0.06);
+      margin-top: 28px;
+    }
+
+    ul {
+      margin: 0 0 0 1.2rem;
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: 0.5em;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .feature-list article {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.1rem;
+    }
+
+    .privacy-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.2rem 1.1rem;
+      margin-top: 1.2rem;
+    }
+
+    .faq {
+      margin-top: 48px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
     }
 
     .links {
-      margin-top: 42px;
+      margin-top: 26px;
+      text-align: center;
     }
 
-    a {
+    .links a,
+    .card a,
+    .privacy-box a,
+    .faq-item a {
       color: var(--terracotta);
       text-decoration: none;
       font-weight: 600;
     }
 
-    a:hover {
+    .links a:hover,
+    .card a:hover,
+    .privacy-box a:hover,
+    .faq-item a:hover {
       text-decoration: underline;
     }
 
     footer {
-      margin-top: 70px;
+      margin-top: 56px;
+      text-align: center;
       color: var(--secondary);
-      font-size: 14px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        padding-top: 52px;
+      }
+
+      .card {
+        padding: 22px 18px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .cta,
+      .secondary-link {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div class="heart">♡</div>
+    <header class="hero" aria-labelledby="page-title">
+      <div class="heart" aria-hidden="true">♡</div>
+      <h1 id="page-title">A-Live Life</h1>
+      <p class="eyebrow">Your Personal Life Calendar</p>
 
-    <h1>A-Live Life</h1>
+      <div class="intro">
+        <p>
+          A-Live Life is a personal life calendar and memory journal for iPhone and iPad.
+          Save meaningful moments, revisit memories, write to your future self, track
+          milestones, and reflect on how your life changes over time.
+        </p>
+      </div>
 
-    <div class="intro">
-      <p>
-        A quiet place for the moments, people, hopes and reflections
-        that make up your life.
-      </p>
-    </div>
-
-    <section class="card">
-      <h2>Keep what you don't want to lose.</h2>
-
-      <p>
-        Save meaningful moments, look forward to what is coming,
-        write to your future self, and notice the story your life is becoming.
-      </p>
-    </section>
-
-    <section class="links">
-      <p>
-        <a href="https://ginawu-dev.github.io/A-Live_Life/privacy">
+      <div class="cta-row" aria-label="App Store download links">
+        <a class="cta" href="https://apps.apple.com/us/app/a-live-life/id6813000871" target="_blank" rel="noopener noreferrer">
+          Download A-Live Life on the App Store
+        </a>
+        <a class="secondary-link" href="https://ginawu-dev.github.io/A-Live_Life/privacy.html">
           Privacy Policy
         </a>
+      </div>
+    </header>
 
-        &nbsp;·&nbsp;
+    <div class="content">
+      <section class="card" aria-labelledby="about-heading">
+        <h2 id="about-heading">A calmer way to keep life in view</h2>
+        <p>
+          A-Live Life is designed around the moments that matter most: a birthday, a new chapter,
+          a small joy, a meaningful conversation, a turning point, or a memory you want to revisit.
+          It does not require a traditional daily diary. Instead, it helps you gather the moments,
+          milestones, and reflections that tell the story of your life over time.
+        </p>
+      </section>
 
-        <a
-          href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Terms of Use
-        </a>
-      </p>
-    </section>
+      <section class="card" aria-labelledby="moments-heading">
+        <h2 id="moments-heading">Life Calendar and meaningful moments</h2>
+        <p>
+          Keep a personal life calendar filled with moments that matter. Add details such as dates,
+          moods, places, notes, and photos to create a living record of what has shaped your life.
+        </p>
+        <div class="feature-list">
+          <article>
+            <h3>Moments that matter</h3>
+            <p>Save key memories with photos, mood, location, and context so they are easy to revisit later.</p>
+          </article>
+          <article>
+            <h3>People and places</h3>
+            <p>Link memories to the people, places, and relationships that matter most to you.</p>
+          </article>
+          <article>
+            <h3>On This Day</h3>
+            <p>Look back at past memories and important dates to notice patterns and revisit the story of your life.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="reflection-heading">
+        <h2 id="reflection-heading">Reflection and future perspective</h2>
+        <p>
+          A-Live Life helps you look back and look ahead. It gives you a place to record how life is changing,
+          what you are learning, and what you want to remember later.
+        </p>
+        <div class="feature-list">
+          <article>
+            <h3>Future Me</h3>
+            <p>Write a letter to your future self and leave a message that can be opened later.</p>
+          </article>
+          <article>
+            <h3>Countdowns</h3>
+            <p>Track upcoming milestones and meaningful dates that matter to you.</p>
+          </article>
+          <article>
+            <h3>My Compass</h3>
+            <p>Reflect on the values, priorities, and ideas that guide how you move through life.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="year-heading">
+        <h2 id="year-heading">Looking back over time</h2>
+        <p>
+          A-Live Life is built for reflection across seasons and years. Use it to notice life changes,
+          revisit memories, and understand how your story is unfolding over time.
+        </p>
+        <div class="feature-list">
+          <article>
+            <h3>Monthly Reflections</h3>
+            <p>Review the month in a more thoughtful way and notice what stood out.</p>
+          </article>
+          <article>
+            <h3>Story of My Year</h3>
+            <p>See the shape of your year through the moments and memories you have saved.</p>
+          </article>
+          <article>
+            <h3>Through the Years</h3>
+            <p>Look back across time and notice the long arc of your life, not just recent events.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="privacy-heading">
+        <h2 id="privacy-heading">Privacy and iCloud sync</h2>
+        <p>
+          Your memories are personal. A-Live Life stores the information you choose to save on your device,
+          and if iCloud Sync is enabled it may sync through your private iCloud account. The App Store
+          listing for A-Live Life states, “Data Not Collected.”
+        </p>
+        <div class="privacy-box">
+          <p>
+            For a concise explanation of how personal data is handled, see the
+            <a href="https://ginawu-dev.github.io/A-Live_Life/privacy.html">A-Live Life Privacy Policy</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>What is a life calendar?</h3>
+            <p>A life calendar is a way to capture the meaningful moments, milestones, and memories that shape a person's life over time, rather than only a daily record of tasks or events.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What is A-Live Life?</h3>
+            <p>A-Live Life is a personal life calendar and memory journal for iPhone and iPad. It helps you save meaningful moments, revisit memories, write to your future self, and reflect on how your life changes over time.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How is A-Live Life different from a traditional diary or journal?</h3>
+            <p>A-Live Life is designed around meaningful moments, memories, milestones, and reflection over time rather than requiring a daily diary. You can save what matters most and revisit it later through your life calendar.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do I need to write something every day?</h3>
+            <p>No. A-Live Life is designed to help you capture meaningful moments as they happen, without requiring a daily diary entry.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can I save memories and photos?</h3>
+            <p>Yes. You can save meaningful moments with details such as photos, moods, places, dates, and notes, and connect people to the memories you want to keep.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can I write a letter to my future self?</h3>
+            <p>Yes. A-Live Life includes a Future Me feature for writing letters to your future self so you can leave encouragement, reflection, or perspective for later.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can I track future milestones or countdowns?</h3>
+            <p>Yes. You can track upcoming milestones and countdowns so your life calendar helps you stay connected to what is coming next.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can A-Live Life help with personal reflection?</h3>
+            <p>Yes. Features such as My Compass, Monthly Reflections, Story of My Year, and Through the Years are designed to help you reflect on patterns, memories, and life change over time.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Does A-Live Life collect personal data?</h3>
+            <p>According to the App Store listing, A-Live Life is marked as Data Not Collected. The app stores the information you choose to save on your device and may sync through your private iCloud account when iCloud Sync is enabled.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is A-Live Life available for iPhone and iPad?</h3>
+            <p>Yes. A-Live Life is designed for iPhone and iPad.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="links">
+        <p>
+          <a href="https://apps.apple.com/us/app/a-live-life/id6813000871" target="_blank" rel="noopener noreferrer">Download A-Live Life on the App Store</a>
+          &nbsp;·&nbsp;
+          <a href="https://ginawu-dev.github.io/A-Live_Life/privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
 
     <footer>
       © 2026 A-Live Life. All rights reserved.

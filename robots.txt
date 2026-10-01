@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ginawu-dev.github.io/A-Live_Life/sitemap.xml
